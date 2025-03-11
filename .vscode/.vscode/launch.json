@@ -1,0 +1,63 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run GameControllerTester",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/.build/debug/GameControllerTester",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "swift: Build Debug GameControllerTester"
+        },
+        {
+            "name": "GameControllerTester (iOS)",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/DerivedData/GameControllerTester/Build/Products/Debug-iphonesimulator/GameControllerTester.app",
+            "preLaunchTask": "Build GameControllerTester",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "env": {},
+            "stopOnEntry": false,
+            "sourceLanguages": [
+                "swift"
+            ],
+            "iosRunOptions": {
+                "deviceName": "iPhone 15",
+                "preferredSimulatorDevice": "iPhone 15",
+                "debugEnabled": true,
+                "simulateLocation": false,
+                "language": "en",
+                "region": "US"
+            }
+        },
+        {
+            "name": "GameControllerTester (iOS Device)",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/DerivedData/GameControllerTester/Build/Products/Debug-iphoneos/GameControllerTester.app",
+            "preLaunchTask": "Build GameControllerTester for Device",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "env": {},
+            "stopOnEntry": false,
+            "sourceLanguages": [
+                "swift"
+            ],
+            "iosRunOptions": {
+                "deviceName": "connected-device",
+                "debugEnabled": true
+            }
+        },
+        {
+            "name": "Launch iOS App",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/GameControllerTester/GameControllerTester.app",
+            "iosTarget": "simulator",
+            "iosBundleId": "com.yourcompany.GameControllerTester",
+            "preLaunchTask": "Build iOS App"
+        }
+    ]
+} 

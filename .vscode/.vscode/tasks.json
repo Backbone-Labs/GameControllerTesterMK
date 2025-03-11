@@ -1,0 +1,52 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build GameControllerTester",
+            "type": "shell",
+            "command": "xcodebuild",
+            "args": [
+                "-project",
+                "GameControllerTester.xcodeproj",
+                "-scheme",
+                "GameControllerTester",
+                "-configuration",
+                "Debug",
+                "-sdk",
+                "iphonesimulator",
+                "-derivedDataPath",
+                "${workspaceFolder}/DerivedData",
+                "build"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "Build GameControllerTester for Device",
+            "type": "shell",
+            "command": "xcodebuild",
+            "args": [
+                "-project",
+                "GameControllerTester.xcodeproj",
+                "-scheme",
+                "GameControllerTester",
+                "-configuration",
+                "Debug",
+                "-sdk",
+                "iphoneos",
+                "-derivedDataPath",
+                "${workspaceFolder}/DerivedData",
+                "build"
+            ],
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ]
+        }
+    ]
+} 

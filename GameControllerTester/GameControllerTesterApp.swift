@@ -6,9 +6,13 @@
 //
 
 import SwiftUI
+import GameController
 
 @main
 struct GameControllerTesterApp: App {
+    init() {
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

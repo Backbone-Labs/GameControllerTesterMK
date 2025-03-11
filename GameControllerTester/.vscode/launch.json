@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug iOS App",
+            "type": "lldb",
+            "request": "custom",
+            "targetCreateCommands": [
+                "target create ${workspaceFolder}/build/Debug-iphonesimulator/GameControllerTester.app/GameControllerTester"
+            ],
+            "processCreateCommands": [
+                "platform select ios-simulator",
+                "process launch"
+            ],
+            "preLaunchTask": "build-ios-app"
+        }
+    ]
+} 
